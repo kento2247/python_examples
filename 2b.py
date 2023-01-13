@@ -6,7 +6,6 @@ import tkinter.ttk as ttk
 from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2Tk)
 import random
-import time
 
 # データ準備
 # in_data = [124, 60, 70, 133, 12, 19, 66, 52, 62, 2, 99, 82, 33]
