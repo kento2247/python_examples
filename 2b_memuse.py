@@ -67,8 +67,8 @@ def do_sort():
     data = [([-1, -1, -1]+in_data)]
     if(method.get() == "quick sort"):
         quickSort(0, len(in_data)-1)
-    elif(method.get() == "simple sort"):
-        simpleSort()
+    elif(method.get() == "selection sort"):
+        selectionSort()
     data.append([-1, -1, -1]+data[-1][3:])
     global is_sorted
     is_sorted = 1
@@ -229,7 +229,7 @@ def quickSort(left, right):
     quickSort(i, right)
 
 
-def simpleSort():
+def selectionSort():
     for i in range(len(in_data)):
         array = data[-1][3:]
         minpos = i
@@ -280,7 +280,7 @@ if __name__ == "__main__":
     label.pack(fill='none', padx=5, in_=frame_3, side="top")
 
     global method
-    option = ["quick sort", "simple sort"]  # 選択肢
+    option = ["quick sort", "selection sort"]  # 選択肢
     method = tk.StringVar()
     label = ttk.Combobox(root, values=option,
                          textvariable=method, state="readonly", justify="center", width=10)
