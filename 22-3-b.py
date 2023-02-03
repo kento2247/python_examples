@@ -79,6 +79,7 @@ def set_root(begin, end):
             break
         pointer = station_list[pointer][1]
     root_list.reverse()
+    # print(root_list)
 
 
 def show_result():
@@ -129,8 +130,8 @@ def show_result():
 
 def main():
     set_adjpare_list()
-    width = 800
-    height = 450
+    width = 450
+    height = 800
 
     root = tk.Tk()
     root.title("tokyu station")
@@ -186,7 +187,7 @@ def main():
 
     frame_result = tk.Frame(root, pady=10, padx=10)
     global text
-    text = tk.Text(frame_result, padx=10)
+    text = tk.Text(frame_result, padx=10, height=59)
     text.grid()
     frame_result.pack(side=tk.RIGHT)
 
